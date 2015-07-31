@@ -43,40 +43,40 @@ function str_cut(&$string, $start, $length, $charset = "utf-8", $dot = '...') {
 
 	$charset = strtolower($charset);
 	switch ($charset) {
-		case "utf-8":
-			preg_match_all("/[\x01-\x7f]|[\xc2-\xdf][\x80-\xbf]|\xe0[\xa0-\xbf][\x80-\xbf]|[\xe1-\xef][\x80-\xbf][\x80-\xbf]|\xf0[\x90-\xbf][\x80-\xbf][\x80-\xbf]|[\xf1-\xf7][\x80-\xbf][\x80-\xbf][\x80-\xbf]/", $string, $ar);
-			if (func_num_args() >= 3) {
-				if (count($ar[0]) > $length) {
-					return join("", array_slice($ar[0], $start, $length)) . $dot;
-				}
-				return join("", array_slice($ar[0], $start, $length));
-			} else {
-				return join("", array_slice($ar[0], $start));
+	case "utf-8":
+		preg_match_all("/[\x01-\x7f]|[\xc2-\xdf][\x80-\xbf]|\xe0[\xa0-\xbf][\x80-\xbf]|[\xe1-\xef][\x80-\xbf][\x80-\xbf]|\xf0[\x90-\xbf][\x80-\xbf][\x80-\xbf]|[\xf1-\xf7][\x80-\xbf][\x80-\xbf][\x80-\xbf]/", $string, $ar);
+		if (func_num_args() >= 3) {
+			if (count($ar[0]) > $length) {
+				return join("", array_slice($ar[0], $start, $length)) . $dot;
 			}
-			break;
-		default:
-			$start = $start * 2;
-			$length = $length * 2;
-			$strlen = strlen($string);
-			for ($i = 0; $i < $strlen; $i++) {
-				if ($i >= $start && $i < ($start + $length)) {
-					if (ord(substr($string, $i, 1)) > 129) {
-						$tmpstr .= substr($string, $i, 2);
-					} else {
-						$tmpstr .= substr($string, $i, 1);
-					}
-
-				}
+			return join("", array_slice($ar[0], $start, $length));
+		} else {
+			return join("", array_slice($ar[0], $start));
+		}
+		break;
+	default:
+		$start = $start * 2;
+		$length = $length * 2;
+		$strlen = strlen($string);
+		for ($i = 0; $i < $strlen; $i++) {
+			if ($i >= $start && $i < ($start + $length)) {
 				if (ord(substr($string, $i, 1)) > 129) {
-					$i++;
+					$tmpstr .= substr($string, $i, 2);
+				} else {
+					$tmpstr .= substr($string, $i, 1);
 				}
 
 			}
-			if (strlen($tmpstr) < $strlen) {
-				$tmpstr .= $dot;
+			if (ord(substr($string, $i, 1)) > 129) {
+				$i++;
 			}
 
-			return $tmpstr;
+		}
+		if (strlen($tmpstr) < $strlen) {
+			$tmpstr .= $dot;
+		}
+
+		return $tmpstr;
 	}
 }
 
@@ -159,8 +159,6 @@ function get_url() {
 [1]  2   3   4     5
 1  [2]  3   4     5   要求显示五页，但是没有这么多数据，就只能按照总页数来排
 
-
-
 1   2  [3]  4     5
 2   3  [4]  5     6
 3   4  [5]  6     7
@@ -169,10 +167,8 @@ function get_url() {
 
 6   7	[8]  9     10
 
-
 6   7	 8  [9]    10
 6   7	 8   9     [10]
-
 
 $pages   5
 
@@ -263,9 +259,9 @@ function getcolor($score) {
 	if ($score > 300) {
 		echo "red";
 	} elseif ($score <= 300 && $score >= 260) {
-		echo "yellow";
-	} elseif ($score <= 260 && $score >= 220) {
 		echo "orange";
+	} elseif ($score <= 260 && $score >= 220) {
+		echo "yellow";
 	} elseif ($score <= 220 && $score >= 180) {
 		echo "blue";
 	} else {
