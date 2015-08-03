@@ -46,13 +46,10 @@ $result = map("司机", $date1, $date2, $id, $case);
 						</tr>
 						<?php foreach ($result as $item) {?>
 						<tr>
-							<td>
-								<?php echo $item["时间"];?></td>
+							<td><?php echo $item["时间"];?></td>
 							<td><?php echo $item["速度"];?></td>
-							<td>
-								<?php echo $item["司机"];?></td>
-							<td>
-								<?php echo $item["车牌号"];?></td>
+							<td><?php echo $item["司机"];?></td>
+							<td><?php echo $item["车牌号"];?></td>
 						</tr>
 						<?php }
 ?>

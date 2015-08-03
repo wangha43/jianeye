@@ -210,6 +210,7 @@ $(function(){
                                                                                 click:function(){
                                                                                     var ac_type= this.name;
                                                                                      show_loading_bar(70);
+                                                                                     console.log(date);
                                                                                      $.ajax({
                                                                                                 url:"http://localhost/jianeye/api/driver_history_road.php",
                                                                                                 method:"post",
@@ -221,7 +222,9 @@ $(function(){
                                                                                                     id:id,
                                                                                                 },
                                                                                                success: function(resp){
-                                                                                                console.log(resp.路段);
+                                                                                                   $('#container_2').children(".row").eq(0).children("table").html("<tr><th>路段名</th><th>各类消息</th><th>综合</th><th>查看整改效果</th><th>地图模式</th></tr>");
+                                                                                                   $('#container_2').children(".row").eq(1).children("table").html("<tr><th>时段名</th><th>各类消息</th><th>综合</th><th>查看整改效果</th><th>地图模式</th></tr>");
+                                                                                                   $('#container_2').children(".row").eq(2).children("table").html("<tr><th>路段名</th> <th>时段名</th><th>各类消息</th><th>综合</th><th>查看整改效果</th><th>地图模式</th></tr>");
                                                                                                    show_loading_bar(100);
                                                                                                    $('#container_2').children(".row").eq(0).children("table").eq(0).children("tr").eq(0).append("<tr></tr>");
                                                                                                    str="";

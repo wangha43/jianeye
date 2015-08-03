@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
 <head>
 	<meta charset="UTF-8">
 	<title>车辆安全风险地图</title>
-	<script src='http://api.map.baidu.com/api?v=1.4'></script>
+<script src='http://api.map.baidu.com/api?v=1.4'></script>
 </head>
     <?php echo $linkheader;?>
 <style type="text/css">
@@ -59,8 +59,9 @@ if (isset($_GET['id']) && is_array($name)) {
 ?>
 		</table>
 	</div>
-
-	<div id='eMapContainer' style='height:600px;' class="col-sm-6" ></div>
+	<div class="col-sm-6">
+	<div id='eMapContainer' style='height:600px;' ></div>
+	</div>
 	</div>
 	</div>
 	</div>

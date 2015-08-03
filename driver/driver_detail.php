@@ -21,6 +21,7 @@ $count = $result["count"];
     <meta charset="UTF-8">
     <title>司机安全风险统计</title>
 </head>
+    <script src='http://api.map.baidu.com/api?v=1.4'></script>
     <?php echo $linkheader;?>
 <body>
     <!-- 可选时间段 周 月份 -->
@@ -28,6 +29,82 @@ $count = $result["count"];
           <?php echo $nav;?>
         <div class="main-content">
          <?php echo $navr;?>
+<section class="profile-env">
+         <div class="row">
+             <div class="col-sm-1"></div>
+             <div class="col-sm-3">
+                    <div class="user-info-sidebar">
+                            <a href="#" class="user-img">
+                                <img src="../assets/images/user-4.png" alt="user-img" class="img-cirlce img-responsive img-thumbnail">
+                            </a>
+                            <a href="#" class="user-name">
+                                司机名
+                                <span class="user-status is-online"></span>
+                            </a>
+                            <span class="user-title">
+                            </span>
+                            <hr>
+                            <ul class="list-unstyled user-info-list">
+                            <li>
+                                <div class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="99.9" data-suffix="%" data-duration="2">
+                                    <div class="xe-icon">
+                                        <i class="linecons-cloud"></i>
+                                    </div>
+                                    <div class="xe-label">
+                                        <strong class="num">99.9%</strong>
+                                        <span>Server uptime</span>
+                                    </div>
+                    </div>
+                            </li>
+                                <div class="xe-widget xe-counter xe-counter-blue" data-count=".num" data-from="1" data-to="117" data-suffix="k" data-duration="3" data-easing="false">
+                        <div class="xe-icon">
+                            <i class="linecons-user"></i>
+                        </div>
+                        <div class="xe-label">
+                            <strong class="num">117k</strong>
+                            <span>Users Total</span>
+                        </div>
+                    </div>
+                            <li>
+                                <div class="xe-widget xe-counter xe-counter-red" data-count=".num" data-from="0" data-to="57" data-prefix="-," data-suffix="%" data-duration="5" data-easing="true" data-delay="1">
+                        <div class="xe-icon">
+                            <i class="linecons-lightbulb"></i>
+                        </div>
+                        <div class="xe-label">
+                            <strong class="num">-,57%</strong>
+                            <span>Exchange Commission</span>
+                        </div>
+                    </div>
+                            </li>
+                            <li>
+
+
+                            </li>
+                        </ul>
+                            <hr>
+                            <ul class="list-unstyled user-friends-count">
+                                <li>
+                                    <span>643</span>
+
+                                </li>
+                                <li>
+                                    <span>108</span>
+
+                                </li>
+                            </ul>
+
+                            <button type="button" class="btn btn-danger btn-block text-left">
+                                监管中
+                                <i class="fa-check pull-right"></i>
+                            </button>
+                        </div>
+             </div>
+             <div class="col-sm-1"></div>
+            <div class="col-sm-7">
+                            <div id="eMapContainer" style="height:600px"></div>
+            </div>
+         </div>
+     </section>
             <div class="row">
         <div class="col-sm-3">
                     <div class="xe-widget xe-counter xe-counter-red" data-count=".num" data-from="1" data-to='<?php echo $result["rank"][9]["安全分数"];?>' data-suffix="" data-duration="3" data-easing="false">
@@ -39,7 +116,6 @@ $count = $result["count"];
                             <span>本周危险分数</span>
                         </div>
                     </div>
-
                     <div class="xe-widget xe-counter xe-counter-red" data-count=".num" data-from="1000" data-to='<?php echo $result["rank"][9]["排名"];?>' data-duration="4" data-easing="true">
                         <div class="xe-icon">
                             <i class="linecons-user"></i>
@@ -60,7 +136,7 @@ $count = $result["count"];
                     </div>
         </div>
         <div class="col-sm-6">
-            <div id="container_2"></div>
+            <div id="container_2" ></div>
             <?php echo page($page, $count, $limit, 4);?>
         </div>
          <div class="col-sm-3"></div>
@@ -74,7 +150,6 @@ $count = $result["count"];
                    <div id="container_3" ></div>
             </div>
     </div>
-
             <a href="driver_explain.php<?php if (isset($id)) {
 	echo '?id=' . $id;
 }
@@ -116,10 +191,23 @@ $count = $result["count"];
         </div>
     </div>
 </body>
+<script>
+try{
+    var map = new BMap.Map('eMapContainer');
+    var point = new BMap.Point(116.404,39.915);
+    map.addControl(new BMap.NavigationControl());
+    map.addControl(new BMap.MapTypeControl());
+    map.enableScrollWheelZoom(true);
+    map.centerAndZoom(point,11);
+    map.setCurrentCity('广州');
+    var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+}catch(ex){
+ }
+</script>
 <?php echo $bottomsc;?>
     <script>
     $(function () {
-
     var colors = ['red', 'yellow', 'orange', 'blue', 'green'],
         categories = [<?php foreach ($result["rank"] as $item) {?>
                 "<?php echo $item["起始日期"] . "至" . $item["终止日期"];?>",
@@ -264,11 +352,6 @@ $count = $result["count"];
             enabled: true
         }
     });
-
-
-
-
-
     var    name = <?php echo '"' . $result["daylist"][0]["司机名"] . '"'?> +'排名趋势',
         data = [
         <?php foreach ($result["rank"] as $item) {?>
@@ -365,5 +448,4 @@ $count = $result["count"];
 
 });
 </script>
-
 </html>

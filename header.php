@@ -41,7 +41,7 @@ $nav = <<<EOF
 				<header class="logo-env">
 					<!-- logo -->
 					<div class="logo">
-							<img src="../assets/images/logo-green.png" width="160" alt="">
+						<span style="color:#979898"></span>
 						<div class="mobile-menu-toggle visible-xs">
 						<a href="#" data-toggle="user-info-menu">
 							<i class="fa-bell-o"></i>

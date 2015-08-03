@@ -218,39 +218,42 @@ $(function(){
                                                                                                     id:id,
                                                                                                 },
                                                                                                success: function(resp){
+                                                                                                  $('#container_2').children(".row").eq(0).children("table").html("<tr><th>路段名</th><th>各类消息</th><th>综合</th><th>查看整改效果</th><th>地图模式</th></tr>");
+                                                                                                   $('#container_2').children(".row").eq(1).children("table").html("<tr><th>时段名</th><th>各类消息</th><th>综合</th><th>查看整改效果</th><th>地图模式</th></tr>");
+                                                                                                   $('#container_2').children(".row").eq(2).children("table").html("<tr><th>路段名</th> <th>时段名</th><th>各类消息</th><th>综合</th><th>查看整改效果</th><th>地图模式</th></tr>");
                                                                                                    show_loading_bar(100);
                                                                                                    $('#container_2').children(".row").eq(0).children("table").eq(0).children("tr").eq(0).append("<tr></tr>");
                                                                                                    str="";
-                                                                                                   for(var i=0,l=resp[0].length;i<l;i++){
+                                                                                                   for(var i=0,l=resp.路段.length;i<l;i++){
                                                                                                         str+='<tr>';
-                                                                                                        str+='<td>'+resp[0][i].路段名+'</td>';
-                                                                                                        str+='<td>'+resp[0][i].消息+'</td>';
-                                                                                                        str+='<td>'+resp[0][i].综合+'</td>';
-                                                                                                        str+='<td><a href="car_trend.php?type=car&id='+id+'&name='+resp[0][i].路段名+'">'+"查看整改效果"+'</a></td>';
-                                                                                                        str+='<td><a href="map_history.php?id='+id+'&name='+resp[0][i].路段名+'">'+"地图模式"+'</a></td>';
+                                                                                                        str+='<td>'+resp.路段[i].路段名+'</td>';
+                                                                                                        str+='<td>'+resp.路段[i].消息+'</td>';
+                                                                                                        str+='<td>'+resp.路段[i].综合+'</td>';
+                                                                                                        str+='<td><a href="car_trend.php?type=car&id='+id+'&name='+resp.路段[i].路段名+'">'+"查看整改效果"+'</a></td>';
+                                                                                                        str+='<td><a href="map.php?id='+id+'&name='+resp.路段[i].路段名+'">'+"地图模式"+'</a></td>';
                                                                                                         str+='</tr>';
                                                                                                     }
                                                                                                    $(str).appendTo( $('#container_2').children(".row").eq(0).children("table").eq(0));
                                                                                                    str="";
-                                                                                                      for(var i=0,l=resp[1].length;i<l;i++){
+                                                                                                      for(var i=0,l=resp.时段.length;i<l;i++){
                                                                                                         str+='<tr>';
-                                                                                                        str+='<td>'+resp[1][i].时段名+'</td>';
-                                                                                                        str+='<td>'+resp[1][i].消息+'</td>';
-                                                                                                        str+='<td>'+resp[1][i].综合+'</td>';
-                                                                                                        str+='<td><a href="car_trend.php?type=car&id='+id+'&time='+resp[1][i].时段名+'">'+"查看整改效果"+'</a></td>';
-                                                                                                        str+='<td><a href="map_history.php?id='+id+'&time='+resp[1][i].时段名+'">'+"地图模式"+'</a></td>';
+                                                                                                        str+='<td>'+resp.时段[i].时段名+'</td>';
+                                                                                                        str+='<td>'+resp.时段[i].消息+'</td>';
+                                                                                                        str+='<td>'+resp.时段[i].综合+'</td>';
+                                                                                                        str+='<td><a href="car_trend.php?type=car&id='+id+'&time='+resp.时段[i].时段名+'">'+"查看整改效果"+'</a></td>';
+                                                                                                        str+='<td><a href="map.php?id='+id+'&time='+resp.时段[i].时段名+'">'+"地图模式"+'</a></td>';
                                                                                                         str+='</tr>';
                                                                                                     }
                                                                                                      $(str).appendTo( $('#container_2').children(".row").eq(1).children("table").eq(0));
                                                                                                          str="";
-                                                                                                      for(var i=0,l=resp[2].length;i<l;i++){
+                                                                                                      for(var i=0,l=resp.路段和时段.length;i<l;i++){
                                                                                                         str+='<tr>';
-                                                                                                        str+='<td>'+resp[2][i].路段名+'</td>';
-                                                                                                        str+='<td>'+resp[2][i].时段名+'</td>';
-                                                                                                        str+='<td>'+resp[2][i].消息+'</td>';
-                                                                                                        str+='<td>'+resp[2][i].综合+'</td>';
-                                                                                                        str+='<td><a href="car_trend.php?type=car&id='+id+'&name='+resp[2][i].路段名+'&time='+resp[2][i].时段名+'">'+"查看整改效果"+'</a></td>';
-                                                                                                        str+='<td><a href="map_history.php?id='+id+'&name='+resp[2][i].路段名+'&time='+resp[2][i].时段名+'">'+"地图模式"+'</a></td>';
+                                                                                                        str+='<td>'+resp.路段和时段[i].路段名+'</td>';
+                                                                                                        str+='<td>'+resp.路段和时段[i].时段名+'</td>';
+                                                                                                        str+='<td>'+resp.路段和时段[i].消息+'</td>';
+                                                                                                        str+='<td>'+resp.路段和时段[i].综合+'</td>';
+                                                                                                        str+='<td><a href="car_trend.php?type=car&id='+id+'&name='+resp.路段和时段[i].路段名+'&time='+resp.路段和时段[i].时段名+'">'+"查看整改效果"+'</a></td>';
+                                                                                                        str+='<td><a href="map.php?id='+id+'&name='+resp.路段和时段[i].路段名+'&time='+resp.路段和时段[i].时段名+'">'+"地图模式"+'</a></td>';
                                                                                                         str+='</tr>';
                                                                                                     }
                                                                                                      $(str).appendTo( $('#container_2').children(".row").eq(2).children("table").eq(0));
