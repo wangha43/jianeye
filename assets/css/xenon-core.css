@@ -804,7 +804,6 @@ body {
   border-bottom: 1px solid #313437;
 }
 .sidebar-menu .logo-env .logo {
-  float: left;
 }
 .sidebar-menu .logo-env .logo .logo-collapsed {
   display: none;

@@ -1,6 +1,6 @@
 <?php
-    require('../header.php');
-    ?>
+require '../header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +12,10 @@
     #tabl tr,th,td{text-align: center!important;}
 </style>
 <body>
-<?php echo $nav;?>
     <div class="page-container">
+            <?php echo $nav;?>
         <div class="main-content">
+             <?php echo $navr;?>
             <div class="row">
                 <div class="col-sm-6" >
 <div>

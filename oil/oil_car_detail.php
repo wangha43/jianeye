@@ -22,11 +22,12 @@ $count = $result["count"];
 </head>
     <?php echo $linkheader;?>
 <body>
-    <?php echo $nav;?>
     <!-- 油耗线与车辆危险分数线 <br>
     -->
     <div class="page-container">
+            <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
             <div class="row">
                 <div class="col-sm-6">
                     <div id="container_1"></div>

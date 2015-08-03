@@ -23,7 +23,6 @@ $count = $result["count"];
 按月份
 <br>
 -->
-<?php echo $nav;?>
 <!-- 用分页表现
 1.与危险分数线关系图 <br>
 4.与刹车时间里程和时间（看能否得到）
@@ -38,7 +37,9 @@ $count = $result["count"];
 <br>
 -->
 <div class="page-container">
+        <?php echo $nav;?>
     <div class="main-content">
+     <?php echo $navr;?>
         <div class="row">
             <div class="col-sm-6">
                 <div id="container_3" ></div>

@@ -22,9 +22,10 @@ $limit = 10;
 <body>
  <!-- 表格显示
  车辆运行时间报表 -->
-	<?php echo $nav;?>
     <div class="page-container">
+        <?php echo $nav;?>
         <div class="main-content">
+             <?php echo $navr;?>
             <div class="row">
      <table class="table table-bordered table-striped table-condensed table-hover" text-align="center" id="tabl">
         <tr>

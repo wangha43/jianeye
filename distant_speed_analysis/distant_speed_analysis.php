@@ -15,9 +15,10 @@ $result = distant_speed_anasis($date);
 <body>
     <!--    时速>
     100超速统计 -->
-    <?php echo $nav;?>
     <div class="page-container">
+            <?php echo $nav;?>
         <div class="main-content">
+             <?php echo $navr;?>
      <div class="row">
                 <form action="" method ="get" class="form">
                     <div class="col-sm-4">

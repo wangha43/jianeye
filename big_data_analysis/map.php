@@ -31,9 +31,10 @@ if (isset($_GET['id'])) {
 		参照文总图片
 		时间段按照上一级
 	列出报警消息列表（包含车牌号） -->
-<?php echo $nav;?>
 	<div class="page-container">
+		<?php echo $nav;?>
 		<div class="main-content">
+		 <?php echo $navr;?>
 			<div class="row">
 				<div class="col-sm-6" >
 

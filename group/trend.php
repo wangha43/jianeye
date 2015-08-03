@@ -33,9 +33,10 @@ $count = $result["count"];
 <body>
     <!-- <span stye="color:red">线状图 最近10周 对象为路段或时段等</span>
 -->
-<?php echo $nav;?>
 <div class="page-container">
+<?php echo $nav;?>
     <div class="main-content">
+ <?php echo $navr;?>
         <div class="row">
             <div class="col-sm-6">
                 <div id="container_2" style="width:700px"></div>

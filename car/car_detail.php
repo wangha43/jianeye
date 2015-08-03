@@ -25,9 +25,10 @@ $count = $result[3]["count"];
     <?php echo $linkheader;?>
 <body>
     <!-- 可选时间段 周 月份 -->
-  <?php echo $nav;?>
     <div class="page-container">
+      <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
           <!--   排名趋势线性图 -->
           <div class="row">
             <div class="col-sm-2">

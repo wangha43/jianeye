@@ -31,9 +31,10 @@ $result = type_explain("车辆", $date1, $date2, $id);
 		加上
 		点击详情显示地图
 	 -->
- <?php echo $nav;?>
   	<div class="page-container">
+  	 <?php echo $nav;?>
 		<div class="main-content">
+		 <?php echo $navr;?>
 			<div class="row">
 				<div class="col-sm-6">
 					姓名：

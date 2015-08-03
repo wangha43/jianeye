@@ -17,9 +17,10 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
     <?php echo $linkheader;?>
     <style type="text/css">#tabl tr,th,td{text-align: center!important;}</style>
 <body>
-    <?php echo $nav;?>
     <div class="page-container">
+        <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
          <div class="row">
                 <form action="" method ="get" class="form">
                     <div class="col-sm-4">

@@ -20,9 +20,10 @@ $result = road_run();
     <br>
     <span stye="color:red">点击进入地图模式</span>
     -->
-    <?php echo $nav;?>
     <div class="page-container">
+            <?php echo $nav;?>
         <div class="main-content">
+             <?php echo $navr;?>
             <div class="row">
                 <div class="col-sm-6">
                     <div id="container_1"></div>

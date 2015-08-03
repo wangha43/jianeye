@@ -24,9 +24,10 @@ $count = $result["count"];
     <?php echo $linkheader;?>
 <body>
     <!-- 可选时间段 周 月份 -->
-    <?php echo $nav;?>
     <div class="page-container">
+          <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
             <div class="row">
         <div class="col-sm-3">
                     <div class="xe-widget xe-counter xe-counter-red" data-count=".num" data-from="1" data-to='<?php echo $result["rank"][9]["安全分数"];?>' data-suffix="" data-duration="3" data-easing="false">

@@ -22,9 +22,10 @@ $count = $result["count"];
 <!-- 表格：<br>
 司机 车牌号 时间 地点 视频 速度降幅（发生前1秒速度减去发生时的速度，越短越好） 从高速降为0的时间  给送到安全员的信息传输
  -->
-<?php echo $nav;?>
     <div class="page-container">
+            <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
          <div class="row">
                 <form action="" method ="get" class="form">
                     <div class="col-sm-4">

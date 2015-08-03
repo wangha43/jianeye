@@ -26,9 +26,10 @@ $count = $result["count"];
         可以选择时间  默认到现在<br>
     可以翻页的柱状图
          按从高到低显示 -->
-    <?php echo $nav;?>
     <div class="page-container">
+        <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
          <div class="row">
                 <div class="col-sm-5"></div>
                 <form action="">

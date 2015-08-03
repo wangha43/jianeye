@@ -23,9 +23,10 @@ $son = get_soncompany("集团", $id);
 
     <!-- 按月份
     按从高到低显示 -->
-    <?php echo $nav;?>
     <div class="page-container">
+            <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
             <div class="row">
                  <div class="col-sm-6">
                     <div id="container_3"></div>

@@ -29,9 +29,10 @@ $result = driver_trend($type, $id, $name, $time);
     #tabl tr,th{text-align: center!important;}
 </style>
 <body>
-      <?php echo $nav;?>
     <div class="page-container">
+          <?php echo $nav;?>
         <div class="main-content">
+             <?php echo $navr;?>
             <div class="row">
                 <div class="col-sm-6" >
             <div id="container_2"></div>

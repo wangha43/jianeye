@@ -23,11 +23,12 @@ $count = $result["count"];
     <?php echo $linkheader;?>
     <style type="text/css">#tabl tr,th,td{text-align: center!important;}</style>
 <body>
-    <?php echo $nav;?>
     <!-- 油耗线与司机危险分数线 <br>
     -->
     <div class="page-container">
+        <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
             <div class="row">
                 <div class="col-sm-6">
                     <div id="container_1" ></div>

@@ -14,13 +14,11 @@ $result = road_safe_road();
 <?php echo $linkheader;?>
     <style type="text/css">#tabl tr,th{text-align: center!important;}</style>
 <body>
-    <?php echo $nav;?>
     <div class="page-container">
+                <?php echo $nav;?>
         <div class="main-content">
+                 <?php echo $navr;?>
             <div class="row">
-
-
-
                         <table class="table table-bordered table-striped table-condensed table-hover" text-align="center" id="tabl">
                             <tr>
                                 <th>路段名</th>

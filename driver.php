@@ -16,7 +16,6 @@ function getfour() {
 	}
 	return $a;
 }
-
 for ($i = 0; $i < 500; $i++) {
 	$bdy = mt_rand(70, 99);
 	$bdm = mt_rand(1, 12);

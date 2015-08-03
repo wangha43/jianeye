@@ -19,11 +19,12 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
     #tabl tr,th,td{text-align: center!important;}
 </style>
 <body>
-  <?php echo $nav;?>
     <div class="page-container">
+        <?php echo $nav;?>
         <div class="main-content">
+        <?php echo $navr;?>
         <div class="row">
-                <form action="" method ="get" class="form">
+          <form action="" method ="get" class="form">
                     <div class="col-sm-4">
                        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                         <input class="form-control" size="16" type="text" value=""  name="time" readonly>
@@ -33,11 +34,10 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
                     </div>
                     </form>
             </div>
-            <div class="row">
+              <div class="row">
                 <div class="col-sm-6" >
 <div id="container">
     <table class="table table-bordered table-hover">
-
             <tr>
                <th>车辆</th>
                <th>故障代码</th>
@@ -47,7 +47,7 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
                <th>处理结果</th>
                <th>处理时间</th>
             </tr>
-            <?php foreach ($result[0] as $item ) {?>
+	 <?php foreach ($result[0] as $item) {?>
             <tr>
                 <td><?php echo $item["车牌号"];?></td>
                 <td><?php echo $item["故障代码"];?></td>
@@ -57,7 +57,8 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
                 <td><?php echo $item["处理结果"];?></td>
                 <td><?php echo $item["处理时间"];?></td>
             </tr>
-            <?}?>
+            <?php }
+?>
     </table>
         <?php echo page($page, $count, $limit, 4);?>
 </div>
@@ -65,29 +66,26 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
   </div>
   </div>
   </div>
-<!-- 表格：<br /> -->
-
-
-<br>
+  <br>
 
 </body>
 <?php echo $bottomsc;?>
 </html>
 <script>
-var d= new Date();
-var str = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
-$('.form_date').datetimepicker({
-        language:  'zh-CN',
-        format:"yyyy-mm-dd",
-        weekStart: 1,
-        todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        minView: 2,
-        forceParse: 0,
-        endDate:str,
-    });
+	var d= new Date();
+	var str = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+	$('.form_date').datetimepicker({
+	        language:  'zh-CN',
+	        format:"yyyy-mm-dd",
+	        weekStart: 1,
+	        todayBtn:  1,
+	        autoclose: 1,
+	        todayHighlight: 1,
+	        startView: 2,
+	        minView: 2,
+	        forceParse: 0,
+	        endDate:str,
+	    });
 </script>
 <script>
                     $(".form-control").change(function(){

@@ -17,9 +17,10 @@ if (isset($_GET["time"])) {
 </head>
     <style type="text/css">#tabl tr,th{text-align: center!important;}</style>
 <body>
-    <?php echo $nav;?>
     <div class="page-container">
+        <?php echo $nav;?>
         <div class="main-content">
+         <?php echo $navr;?>
             <!-- 默认10个星期 可选月份  可选时间段 月份或者星期  -->
              <div class="row">
                 <form action="" method ="get" class="form">

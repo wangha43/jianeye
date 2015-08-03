@@ -32,9 +32,10 @@ $count = $result["count"];
         根据权限显示
     <br>
     -->
-    <?php echo $nav;?>
     <div class="page-container">
+            <?php echo $nav;?>
         <div class="main-content">
+             <?php echo $navr;?>
             <div class="row">
                 <div class="col-sm-6" >
                     <div id="container"></div>
