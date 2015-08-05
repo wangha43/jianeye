@@ -115,7 +115,7 @@
 												// Redirect after successful login page (when progress bar reaches 100%)
 												if(resp.accessGranted)
 												{
-													window.location.href = '';
+													window.location.href = './driver/driver_list.php';
 												}
 																						}
 										});

@@ -666,7 +666,7 @@ footer.main-footer .go-up a,
   clear: both;
 }
 body {
-  background-color: #eeeeee;
+  background-color: #eeeeee!important;
 }
 a {
   outline: none !important;

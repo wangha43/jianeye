@@ -3,16 +3,16 @@ require '../includelib/fun.php';
 require '../header.php';
 require '../db_api.php';
 if (isset($_GET["time"])) {
-	$score = driver_statistics("司机", $_GET["time"]);
+	$score = driver_statistics("驾驶员", $_GET["time"]);
 } else {
-	$score = driver_statistics("司机", date("Y-m-d", time()));
+	$score = driver_statistics("驾驶员", date("Y-m-d", time()));
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>司机安全风险表</title>
+    <title>驾驶员安全风险表</title>
     <?php echo $linkheader;?>
 </head>
     <style type="text/css">#tabl tr,th{text-align: center!important;}</style>
@@ -100,7 +100,7 @@ if (isset($_GET["time"])) {
             type: 'column'
         },
         title: {
-            text: '司机安全风险表'
+            text: '驾驶员安全风险表'
         },
 
         xAxis: {
@@ -161,7 +161,7 @@ if (isset($_GET["time"])) {
             type: 'line'
         },
         title: {
-            text: '司机安全风险表'
+            text: '驾驶员安全风险表'
         },
 
         xAxis: {
