@@ -36,7 +36,7 @@ $count = $result[3]["count"];
                             <div class="chart-item-bg del1">
                             <div class="user-info-sidebar">
                             <a href="" class="user-img">
-                                <img src="../assets/images/car.png" alt="car-img" class="img-cirlce img-responsive img-thumbnail" style="width:80px;height:80px">
+                                <img src="../assets/images/car.png" alt="car-img" class="img-cirlce img-responsive img-thumbnail" style="width:60px;height:60px">
                                 <?php givestar(4.5);?>
                             </a>
                               <span class="user-title">
@@ -99,7 +99,7 @@ $count = $result[3]["count"];
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-8">
-                        <div id="eMapContainer" style="height:637px"></div>
+                        <div id="eMapContainer" style="height:494px"></div>
                     </div>
                 </div>
             </section>
