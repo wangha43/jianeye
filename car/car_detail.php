@@ -44,7 +44,8 @@ $count = $result[3]["count"];
                                     <span class="user-status is-online"></span>
                                 </span>
                             <span class="user-title">
-                                <input id="switch-state" type="checkbox" checked></span>
+                                 <input id="switch-size" type="checkbox" checked data-size="mini">
+                                </span>
                             <span class="user-title">监管中</span>
                             <ul class="list-unstyled user-info-list">
                                 <li>

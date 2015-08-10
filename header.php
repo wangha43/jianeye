@@ -46,7 +46,7 @@ $nav =
 		<header class="logo-env">
 			<!-- logo -->
 			<div class="logo">
-				<span style="color:#fff">戬智眼安防科技</span>
+				<span style="color:#fff"><strong>戬智眼安防科技</strong></span>
 				<div class="mobile-menu-toggle visible-xs">
 					<a href="#" data-toggle="user-info-menu"> <i class="fa-bell-o"></i>
 						<span class="badge badge-success"></span>

@@ -51,7 +51,7 @@ $count = isset($result["count"]) ? $result["count"] : 10;
         </tr>
        <?php foreach ($result[0] as $items) {?>
         <tr>
-            <td><a href='../driver/driver_detail.php?id=<?php echo $items['司机工号'];?>'><?php echo $items['司机名'];?></a></td>
+            <td><a href='../driver/driver_detail.php?id=<?php echo $items['司机工号'];?>' target="_parent"><?php echo $items['司机名'];?></a></td>
             <td class="danger"><?php echo $items['里程'];?></td>
             <td><?php echo $items['FCW'];?></td>
             <td><?php echo $items['PCW'];?></td>

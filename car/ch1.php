@@ -47,7 +47,7 @@ $count = $result["count"];
         </tr>
        <?php foreach ($result["data"] as $items) {?>
         <tr>
-            <td><a href='../car/car_detail.php?id=<?php echo $items['车牌号'];?>'><?php echo $items['车牌号'];?></a></td>
+            <td><a href='../car/car_detail.php?id=<?php echo $items['车牌号'];?>' target="_parent"><?php echo $items['车牌号'];?></a></td>
             <td class="danger"><?php echo $items['里程'];?></td>
             <td><?php echo $items['FCW'];?></td>
             <td><?php echo $items['PCW'];?></td>

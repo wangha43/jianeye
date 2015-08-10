@@ -1,22 +1,22 @@
 /*
- * jQuery autoResize (textarea auto-resizer)
- * @copyright James Padolsey http://james.padolsey.com
- * @version 1.04
+ * 
+ * 
+ * 
  */
+ function seth(){
+ 	var nowwidth=$("#container").width();  
+    	var zoomTimes= $(".col-sm-6").attr('data-pv');      
+    	$("#container").css("height",nowwidth/zoomTimes+"px");        
+	// $("#container").each(function(){                
+	// $(this).css("height",nowwidth/zoomTimes+"px");  
+	// });
+ }
  $(document).ready(function(){
 	 var curWidth  = $(".col-sm-6").width();  
-	 var curHeight = $(".row").height();
-	 console.log(curHeight);
-	 console.log(curWidth);
+	 var curHeight = $(".col-sm-6").height();
+	 var zoom=curWidth/curHeight;
+	 $(".col-sm-6").attr('data-pv',zoom);
 	              $(window).resize(function(){
-	                  var nowwidth=$(this).width();  
-	                   $("col-sm-6").each(function(){                
-	                         zoomTimes=curWidth/curHeight;  
-	                         $(this).height(nowwidth/zoomTimes);  
-	               });
-	                    	 var curWidth  = $(".col-sm-6").width();  
-			 var curHeight = $(".row").height();
-			 console.log(curHeight);
-			 console.log(curWidth);
+	             	setTimeout(seth(),500);
 	}); 
 });

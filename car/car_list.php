@@ -175,7 +175,7 @@ if (isset($_GET["time"])) {
                              window.open('ch1.php?date='+this.category,'ch1');
                                $("#container_1").css('display','block');
                                     var wi= document.getElementById("ch1").contentWindow.document.body.scrollHeight + "px";
-                                       var cc=$("#container_1").offset().top+wi;
+                                    var cc=$("#container_1").offset().top+wi;
                             $('html,body').animate({scrollTop: $("#container_1").offset().top+wi}, 500);
                         }
                     }

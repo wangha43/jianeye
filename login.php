@@ -80,7 +80,6 @@
 							submitHandler: function(form)
 							{
 								show_loading_bar(70); // Fill progress bar to 70% (just a given value)
-
 								var opts = {
 									"closeButton": true,
 									"debug": false,
@@ -167,15 +166,11 @@
 						<p>亲爱的用户,请登陆进入界面</p>
 					</div>
 
-
 					<div class="form-group">
-						<label class="control-label" for="username">用户名</label>
-						<input type="text" class="form-control" name="username" id="username" autocomplete="off" />
+						<input type="text" class="form-control" name="username" id="username" autocomplete="off"  placeholder="用户名"/>
 					</div>
-
 					<div class="form-group">
-						<label class="control-label" for="passwd">密码</label>
-						<input type="password" class="form-control" name="passwd" id="passwd" autocomplete="off" />
+						<input type="password" class="form-control" name="passwd" id="passwd" autocomplete="off" placeholder="密码"/>
 					</div>
 
 					<div class="form-group">

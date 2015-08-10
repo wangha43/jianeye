@@ -213,7 +213,6 @@ function page($current, $count, $limit, $size, $class = 'paginate_button') {
 			$end = $pages;
 		} else {
 			//情况3
-
 			$d = floor($size / 2);
 			$star = $current - $d;
 			$end = $current + $d;
@@ -273,11 +272,11 @@ function givestar($score) {
 	$s = "";
 	if ($score > 0) {
 		for ($i = $score; $i >= 1; $i--) {
-			$s .= "<img src='../images/fullstar.jpg' alt=''>";
+			$s .= "<img src='../images/fullstar.png' alt=''>";
 		}
 	}
 	if (is_float($score)) {
-		$s .= "<img src='../images/halfstar.jpg' alt=''>";
+		$s .= "<img src='../images/halfstar.png' alt=''>";
 
 	}
 	echo $s;
