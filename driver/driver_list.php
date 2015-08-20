@@ -54,7 +54,7 @@ if (isset($_GET["time"])) {
         <div class="row">
             <div class="col-sm-6">
 
-
+                                <div id="con1"></div>
                     <!-- 每个格子存在背景色
 点击后显示
 默认为最近星期时间段的排名 --> </div>
@@ -62,10 +62,32 @@ if (isset($_GET["time"])) {
         </div>
     </div>
 </div>
+<!-- Modal 2 (Custom Width)-->
+    <div class="modal fade custom-width" id="modal-2">
+        <div class="modal-dialog" style="width: 80%;">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+            <div class="result">
+
+            </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
  <?php echo $bottomsc;?>
 <script>
     $(function () {
+
+
     var colors = ['red', 'yellow', 'orange', 'blue', 'green','red', 'yellow', 'orange', 'blue', 'green',],
         categories = [<?php foreach ($score as $item) {?>
                 "<?php echo $item["起始日期"] . "至" . $item["终止日期"];?>",
@@ -97,7 +119,13 @@ if (isset($_GET["time"])) {
             enabled: false
         },
         chart: {
-            type: 'column'
+            type: 'column',
+            events:{
+                click:function(e)
+                {
+                    console.log(1);
+                }
+            }
         },
         title: {
             text: '驾驶员安全风险表'
@@ -241,6 +269,10 @@ $('.form_date').datetimepicker({
 <script>
                     $(".form-control").change(function(){
                             $(".form").submit();
+                    });
+                    $("#container").mouseover(function(){
+                        var con=$("#container");
+                        console.log(con);
                     });
 </script>
 </html>

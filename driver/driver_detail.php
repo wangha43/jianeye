@@ -139,20 +139,14 @@ $count = $result["count"];
                 </div>
             </div>
             <div class="row">
-                <div class="chart-item-bg">
-                    <div id="container_6" ></div>
+                <div class="col-sm-6">
+                    <div class="chart-item-bg">
+                        <div id="container_5" ></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="chart-item-bg">
-                    <div id="container_5" ></div>
-                </div>
-            </div>
-            <!-- +1个表格 统计星期内数据 图形表格化 表格可以按月或者周 显示周或者天内数据
-    表格上额外放置按钮 -->
-            <div class="row">
-                <div class="chart-item-bg">
-                    <div id="container_4" >
+                <div class="col-sm-6">
+                  <div class="chart-item-bg">
+
                         <h4>
                             <center>驾驶员本周数据</center>
                         </h4>
@@ -188,7 +182,22 @@ $count = $result["count"];
                             </tr>
                             <?php }
 ?></table>
-                    </div>
+
+                </div>
+                </div>
+            </div>
+
+            <div class="row">
+            <div class="col-sm-12">
+                <div class="chart-item-bg">
+                    <div id="container_6" ></div>
+                </div>
+                </div>
+            </div>
+            <!-- +1个表格 统计星期内数据 图形表格化 表格可以按月或者周 显示周或者天内数据
+    表格上额外放置按钮 -->
+            <div class="row">
+                <div class="chart-item-bg">
                 </div>
             </div>
 

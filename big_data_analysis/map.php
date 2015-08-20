@@ -14,7 +14,6 @@ if (isset($_GET['id'])) {
 	$date = '';
 	$car = '';
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

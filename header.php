@@ -83,12 +83,12 @@ $nav =
 						</a>
 					</li>
 					<li class="">
-						<a>
+						<a  href="../road/road_list.php"  >
 							<span class="title">路况分析</span>
 						</a>
 					</li>
 					<li class="">
-						<a>
+						<a href="../big_data_analysis/all.php">
 							<span class="title">大数据分析</span>
 						</a>
 					</li>
@@ -307,31 +307,31 @@ $navr =
 					<li>
 						<a href="#edit-profile">
 							<i class="fa-edit"></i>
-							New Post
+							编辑
 						</a>
 					</li>
 					<li>
 						<a href="#settings">
 							<i class="fa-wrench"></i>
-							Settings
+							设置
 						</a>
 					</li>
 					<li>
 						<a href="#profile">
 							<i class="fa-user"></i>
-							Profile
+							简介
 						</a>
 					</li>
 					<li>
 						<a href="#help">
 							<i class="fa-info"></i>
-							Help
+							帮助
 						</a>
 					</li>
 					<li class="last">
 						<a href="extra-lockscreen.html">
 							<i class="fa-lock"></i>
-							Logout
+							登出
 						</a>
 					</li>
 				</ul>

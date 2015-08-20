@@ -25,7 +25,7 @@
 	<style type="text/css">
 	.login-page{
 		background:#666 url(./images/back.png) no-repeat left top !important;
-		background-size: 100% auto!important;
+		background-size: cover!important;
 		background-repeat: no-repeat!important;
 	}
 	.login-page{

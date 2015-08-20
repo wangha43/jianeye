@@ -43,7 +43,7 @@ $result = road_run();
     </div>
 </body>
 <?php echo $bottomsc;?>
-    <script>
+<script>
     $(function () {
     $('#container_1').highcharts({
         chart: {

@@ -1,0 +1,22 @@
+.xe-widget.xe-counter-block .xe-upper .xe-icon + .xe-label, .xe-widget.xe-progress-counter .xe-upper .xe-icon + .xe-label {
+    padding-left: 52px;
+    padding-top: 20px;
+}
+.xe-widget.xe-counter-block .xe-lower, .xe-widget.xe-counter .xe-label, .xe-widget.xe-counter-block .xe-upper .xe-icon, .xe-widget.xe-counter-block .xe-upper .xe-label, .xe-widget.xe-progress-counter .xe-upper .xe-icon, .xe-widget.xe-progress-counter .xe-upper .xe-label {
+    padding: 16px;
+}
+.xe-widget.xe-counter-block .xe-lower, .xe-widget.xe-progress-counter .xe-lower {
+    padding: 15px 15px;
+}
+.xe-widget.xe-counter .xe-label .num, .xe-widget.xe-counter-block .xe-upper .xe-label .num, .xe-widget.xe-progress-counter .xe-upper .xe-label .num {
+    font-size: 21px;
+}
+@media screen and (min-width: 768px){
+.modal-dialog {
+    right: auto;
+    width: 600px;
+    left: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+}
